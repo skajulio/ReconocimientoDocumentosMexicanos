@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CustomV5"
+             x:Class="CustomV5.MainPage" Title="POC Custom Vision">
+  
+<StackLayout Padding="20">
+  
+
+        <Image x:Name="ImgSource" Source="icon.png" 
+               MinimumWidthRequest="100"
+               MinimumHeightRequest="100"
+               HorizontalOptions="Center"/>
+
+        <Button Text="Elige una foto" Clicked="ElegirClick"></Button>
+        <Button Text="Tomar una foto" Clicked="TomarClick"></Button>
+        <!--<Button Text="Analizar Texto" Clicked="AnalizarTexto"></Button>-->
+        <!--<Button Text="Analizar" Clicked="ClasificadorClick"></Button>-->
+
+        <Label x:Name="Resultado"/>
+        <ProgressBar x:Name="Precision"/>
+
+  <ScrollView>
+    <Label x:Name="text"/>
+  </ScrollView>
+    </StackLayout>
+
+
+</ContentPage>
