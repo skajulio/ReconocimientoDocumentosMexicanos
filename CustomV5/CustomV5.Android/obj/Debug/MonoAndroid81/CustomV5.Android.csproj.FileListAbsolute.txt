@@ -57,6 +57,12 @@ C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\bin\D
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\bin\Debug\CustomV5.dll.mdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\bin\Debug\FormsViewGroup.dll.mdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
+C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\CustomV5.dll.mdb
+C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb
+C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
+C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\android\assets\CustomV5.dll.mdb
+C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\android\assets\FormsViewGroup.dll.mdb
+C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\DocsMexico.Android.pdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\Mono.Android.pdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\mscorlib.pdb
@@ -78,12 +84,6 @@ C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\D
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\System.Web.Services.pdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\Mono.Security.pdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\System.ServiceModel.Internals.pdb
-C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\CustomV5.dll.mdb
-C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb
-C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
-C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\android\assets\CustomV5.dll.mdb
-C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\android\assets\FormsViewGroup.dll.mdb
-C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\android\assets\DocsMexico.Android.pdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Android.pdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Security.pdb
@@ -105,9 +105,7 @@ C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\D
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Xaml.pdb
-C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5\bin\Debug\netstandard2.0\CustomV5.dll
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\DocsMexico.Android.pdb
-C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\bin\Debug\CustomV5.dll.mdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\CustomV5.dll.mdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
