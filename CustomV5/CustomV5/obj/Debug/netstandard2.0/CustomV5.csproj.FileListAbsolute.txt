@@ -33,4 +33,3 @@ C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5\obj\Debug\net
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5\obj\Debug\netstandard2.0\CustomV5.dll
 C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5\obj\Debug\netstandard2.0\CustomV5.pdb
-C:\Users\julio.leal\Documents\Azure\CustomV_Docs\CustomV5\CustomV5\obj\Debug\netstandard2.0\CustomV5.csprojAssemblyReference.cache

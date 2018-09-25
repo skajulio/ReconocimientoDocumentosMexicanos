@@ -221,6 +221,140 @@ namespace CustomV5
             }
         }
 
+        private async Task AnalizarHandText()
+        {
+            var httpClient2 = new HttpClient();
+            const string subscriptionKey = "11353e12efd34147a54b3914bb575f44";
+            httpClient2.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", subscriptionKey);
+            const string endpoint2 = "https://southcentralus.api.cognitive.microsoft.com/vision/v2.0/recognizeText?mode=Handwritten";
+
+            string operationLocation;
+
+            HttpResponseMessage response2;
+
+            byte[] byteData = GetImageAsByteArray(_foto.Path);
+
+            using (UserDialogs.Instance.Loading("Obteniendo información..."))
+            {
+
+                using (ByteArrayContent content = new ByteArrayContent(byteData))
+                {
+                    content.Headers.ContentType =
+                        new MediaTypeHeaderValue("application/octet-stream");
+
+                    response2 = await httpClient2.PostAsync(endpoint2, content);
+
+                    //add hand
+                    operationLocation =
+                        response2.Headers.GetValues("Operation-Location").FirstOrDefault();
+                }
+
+                if (!response2.IsSuccessStatusCode)
+                {
+                    UserDialogs.Instance.Toast("A ocurrido un error en ocr");
+                    return;
+                }
+
+                text.Text = "";
+                List<Region> regions = new List<Region>();
+                List<Line> lines = new List<Line>();
+                List<Word> words = new List<Word>();
+                var json2 = await response2.Content.ReadAsStringAsync();
+                var str = "";
+                var nombre = "";
+                var primerApellido = "";
+                var segundoApellido = "";
+                var numDNI = "";
+                var apellidos = "";
+
+                //--Hand
+                string contentString;
+                int i = 0;
+                do
+                {
+                    System.Threading.Thread.Sleep(1000);
+                    response2 = await httpClient2.GetAsync(operationLocation);
+                    contentString = await response2.Content.ReadAsStringAsync();
+                    ++i;
+                }
+                while (i < 10 && contentString.IndexOf("\"status\":\"Succeeded\"") == -1);
+
+                if (i == 10 && contentString.IndexOf("\"status\":\"Succeeded\"") == -1)
+                {
+                    Console.WriteLine("\nTimeout error.\n");
+                    return;
+                }
+
+                var textObject = JsonConvert.DeserializeObject<TextObject>(json2);
+
+                regions = textObject.regions.ToList();
+
+                foreach (var r in regions)
+                {
+                    lines.AddRange(r.lines.ToList());
+                }
+
+                foreach (var l in lines)
+                {
+                    words.AddRange(l.words.ToList());
+                    text.Text = $"{text.Text} {l.ToString()}";
+                }
+
+                foreach (var w in words)
+                {
+                    if (!w.text.Contains("FECHA") && !w.text.Contains("ESPAÑA") && !w.text.Contains("NACIMIENTO") && !w.text.Contains("ESP ") && !w.text.Contains("DESP") && !w.text.Contains("VALIDO") && !w.text.Contains("HASTA") && !w.text.Contains("SSU") && !w.text.Contains(" M ") && !w.text.Contains(" H "))
+                    {
+
+                        text.Text = $"{text.Text} {w.text}";
+                        str = $"{text.Text} {w.text}";
+                    }
+                }
+
+                //foreach (var w in words)
+                //{
+                //    text.Text = $"{text.Text} {w.text}";
+
+                //    str = $"{text.Text} {w.text}";
+
+                //    if (char.IsDigit(w.text[0]) && w.text.Length == 9 && char.IsLetter(w.text[w.text.Length - 1]))
+                //    {
+                //        numDNI = w.text;
+                //    }
+                //}
+
+                // Display the JSON response.
+                //text.Text = $"\nResponse:\n\n{JToken.Parse(contentString).ToString()}\n";
+
+                //switch (tagFoto)
+                //{
+                //    case "DNI 2.0":
+                //        //Obtener datos desde un dni 2.0
+                //        primerApellido = getBetween(str, "APELLIDO", "SEGUNDO");
+                //        segundoApellido = getBetween(str, "SEGUNDO APELLIDO", "NOMBRE");
+                //        nombre = getBetween(str, "NOMBRE", "NACIONALIDAD");
+                //        //numDNI = getBetween(str, "NÚM. ", "");
+                //        //Alert para datos de DNI 2.0
+                //        await DisplayAlert("DNI 2.0: Datos obtenidos", $"{nombre}{primerApellido}{segundoApellido} {numDNI}", "Ok");
+                //        break;
+                //    case "DNI 3.0":
+                //        //Obtener datos desde un dni 3.0
+                //        apellidos = getBetween(str, "APELLIDOS", "NOMBRE");
+                //        nombre = getBetween(str, "NOMBRE", "SEXO");
+                //        numDNI = getBetween(str, "DNI ", "");
+                //        //if (numDNI == "")
+                //        //{
+                //        //    numDNI = getBetween(str, "DM ", "");
+                //        //}
+                //        //Alert para datos de DNI 3.0
+                //        await DisplayAlert("DNI 3.0: Datos obtenidos", $"{nombre}{apellidos} {numDNI}", "Ok");
+                //        break;
+                //    default:
+                //        await DisplayAlert("Error", "Documento no válido", "Ok");
+                //        break;
+                //}
+            }
+        }
+
         public static string getBetween(string strSource, string strStart, string strEnd)
         {
             int Start, End;
